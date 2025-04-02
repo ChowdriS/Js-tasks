@@ -7,9 +7,6 @@ thumbnails.forEach(thumbnail => {
     thumbnail.addEventListener('click', () => {
         lightbox.classList.add('active');
         lightboxImg.src = thumbnail.dataset.large;
-        lightboxImg.onload = () => {
-            lightboxImg.classList.add('loaded');
-        };
     });
 });
 
