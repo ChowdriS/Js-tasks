@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task5</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Math quiz</h1>
+        <p class="question-count">Hi</p>
+        <div class="question"></div>
+        <div class="options"></div>
+        <button class="next-btn hidden">Next Question ➔</button>
+        <div class="score-container hidden">
+            <p>Your Score: <span id="score">0</span>/5</p>
+            <button class="retry-btn" onclick="location.reload()">Try Again!</button>
+        </div>
+    </div>
+
+    <script src="assets/questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
