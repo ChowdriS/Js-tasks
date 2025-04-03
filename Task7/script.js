@@ -1,10 +1,11 @@
 const chatMessages = document.getElementById('chatMessages');
 const messageInput = document.getElementById('messageInput');
 const botResponses = [
-    'Interesting!',
     'Hi',
     'How are you?',
     'Thanks!',
+    'Sorry',
+    'No Its is pleasure',
     'Hope you are good!',
     'Welcome back!',
     'Sweet of you!'
