@@ -1,4 +1,3 @@
-const apiKey = '82aa14ef4e829c8d057118249a51b4c0';
 const weatherInfo = document.getElementById('weatherInfo');
 const errorMessage = document.getElementById('errorMessage');
 const cityInput = document.getElementById('cityInput');
@@ -13,7 +12,7 @@ async function getWeather() {
 
     try {
         const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`
         );
         // console.log(response)
         if (!response.ok) {

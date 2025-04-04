@@ -35,6 +35,7 @@ async function loadMoreProducts() {
         if (!response.ok) throw new Error('Failed to fetch');
         
         const data = await response.json();
+        console.log(data)
         const products = data.products;
         
         if (products.length > 0) {
