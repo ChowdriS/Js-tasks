@@ -33,7 +33,7 @@ function sendMessage() {
     setTimeout(() => {
         const botText = botResponses[Math.floor(Math.random() * botResponses.length)];
         addMessage(false, botText);
-    }, 1000 + Math.random() * 1000);
+    }, 1000);
 }
 
 messageInput.addEventListener('keypress', (e) => {
