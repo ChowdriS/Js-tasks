@@ -6,8 +6,9 @@
     margin-bottom: 1rem;
     background-color: white;
     border: 1px solid black ;
-    width: 100%;
+    width: 100vw;
     border-radius: 10px;
+    z-index: 100;
 }
 
 .container {
