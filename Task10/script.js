@@ -20,15 +20,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     let products = [];
 
     async function fetchProducts() {
-        const response = await fetch("https://dummyjson.com/products?limit=100");
+        const response = await fetch("https://dummyjson.com/products?limit=150&skip=50");
         const data = await response.json();
         products = data.products;
         displayProducts(products);
         populateCategories(products);
     }
 
-    function displayProducts(filteredProducts) {
-        productContainer.innerHTML = filteredProducts.map(product => `
+    function displayProducts(Products) {
+        productContainer.innerHTML = Products.map(product => `
             <div class="product">
                 <img src="${product.thumbnail}" alt="${product.title}">
                 <h3>${product.title}</h3>
@@ -74,11 +74,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         updateOrders();
         alert("Order placed successfully!");
         localStorage.setItem("orders", JSON.stringify(orders));
+        localStorage.setItem("cart", JSON.stringify(cart));
         cartModal.style.display = "none";
     });
 
     function updateOrders() {
-        ordersList.innerHTML = orders.map(item => `<li>${item.title} - $${item.price} x ${item.quantity}</li>`).join('');
+        ordersList.innerHTML = orders.map(item => `<li>${item.title} - $${item.price} x ${item.quantity} = ${item.price*item.quantity}</li>`).join('');
     }
 
     searchInput.addEventListener("input", () => {
